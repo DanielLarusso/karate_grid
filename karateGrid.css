@@ -1,0 +1,421 @@
+/**
+ * Karate Grid v1
+ */
+
+/* universal */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    font-size: 100%;
+}
+
+/* generalFontStyles */
+
+* {
+    font-family: Helvetica, sans-serif;
+    color: #333447;
+    line-height: 1.5;
+}
+
+/* typography */
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.375rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.875rem;
+}
+
+p {
+    font-size: 1.125rem;
+    font-weight: 200;
+    line-height: 1.8;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-heavy {
+    font-weight: 700;
+}
+
+/* coloring */
+
+.primary {
+    color: #4285f4;
+}
+
+button.primary,
+.primary[class^="button"] {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+a.primary:hover {
+    color: #0d47a1;
+}
+
+button.primary:hover,
+.primary[class^="button"]:hover {
+    background-color: #0d47a1;
+    color: #fff;
+}
+
+.secondary {
+    color: #aa66cc;
+}
+
+button.secondary,
+.secondary[class^="button"] {
+    background-color: #aa66cc;
+    color: #fff;
+}
+
+a.secondary:hover {
+    color: #9933cc;
+}
+
+button.secondary:hover,
+.secondary[class^="button"]:hover {
+    background-color: #9933cc;
+    color: #fff;
+}
+
+.default {
+    color: #2bbbad;
+}
+
+button.default,
+.default[class^="button"] {
+    background-color: #2bbbad;
+    color: #fff;
+}
+
+a.default:hover {
+    color: #00695c;
+}
+
+button.default:hover,
+.default[class^="button"]:hover {
+    background-color: #00695c;
+    color: #fff;
+}
+
+.info {
+    color: #33b5e5;
+}
+
+button.info,
+.info[class^="button"] {
+    background-color: #33b5e5;
+    color: #fff;
+}
+
+a.info:hover {
+    color: #0099cc;
+}
+
+button.info:hover,
+.info[class^="button"]:hover {
+    background-color: #0099cc;
+    color: #fff;
+}
+
+.danger {
+    color: #ff4444;
+}
+
+button.danger,
+.danger[class^="button"] {
+    background-color: #ff4444;
+    color: #fff;
+}
+
+a.danger:hover {
+    color: #CC0000;
+}
+
+button.danger:hover,
+.danger[class^="button"]:hover {
+    background-color: #CC0000;
+    color: #fff;
+}
+
+.warning {
+    color: #ffbb33;
+}
+
+button.warning,
+.warning[class^="button"] {
+    background-color: #ffbb33;
+    color: #fff;
+}
+
+a.warning:hover {
+    color: #FF8800;
+}
+
+button.warning:hover,
+.warning[class^="button"]:hover {
+    background-color: #FF8800;
+    color: #fff;
+}
+
+.success {
+    color: #00C851;
+}
+
+button.success,
+.success[class^="button"] {
+    background-color: #00C851;
+    color: #fff;
+}
+
+a.success:hover {
+    color: #007E33;
+}
+
+button.success:hover,
+.success[class^="button"]:hover {
+    background-color: #007E33;
+    color: #fff;
+}
+
+/* input */
+input {
+    width: 100%;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input[type="text"],
+button,
+.button {
+    display: inline-block;
+    padding: .375rem;
+    margin-bottom: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+button,
+.button {
+    text-decoration: none;
+    padding: .375rem .75rem;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+/* positioning */
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+/* grid */
+
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+}
+
+.row [class^="col"] {
+    float: left;
+    margin: 0.5rem 2%;
+    min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    width: 96%;
+}
+
+.col-1-sm {
+    width: 4.33%;
+}
+
+.col-2-sm {
+    width: 12.66%;
+}
+
+.col-3-sm {
+    width: 21%;
+}
+
+.col-4-sm {
+    width: 29.33%;
+}
+
+.col-5-sm {
+    width: 37.66%;
+}
+
+.col-6-sm {
+    width: 46%;
+}
+
+.col-7-sm {
+    width: 54.33%;
+}
+
+.col-8-sm {
+    width: 62.66%;
+}
+
+.col-9-sm {
+    width: 71%;
+}
+
+.col-10-sm {
+    width: 79.33%;
+}
+
+.col-11-sm {
+    width: 87.66%;
+}
+
+.col-12-sm {
+    width: 96%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hidden-sm {
+    display: none;
+}
+
+@media only screen and (min-width: 33.75em) {  /* 540px */
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 45em) {  /* 720px */
+    .col-1 {
+        width: 4.33%;
+    }
+
+    .col-2 {
+        width: 12.66%;
+    }
+
+    .col-3 {
+        width: 21%;
+    }
+
+    .col-4 {
+        width: 29.33%;
+    }
+
+    .col-5 {
+        width: 37.66%;
+    }
+
+    .col-6 {
+        width: 46%;
+    }
+
+    .col-7 {
+        width: 54.33%;
+    }
+
+    .col-8 {
+        width: 62.66%;
+    }
+
+    .col-9 {
+        width: 71%;
+    }
+
+    .col-10 {
+        width: 79.33%;
+    }
+
+    .col-11 {
+        width: 87.66%;
+    }
+
+    .col-12 {
+        width: 96%;
+    }
+
+    .hidden-sm {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 60em) { /* 960px */
+    .container {
+        width: 75%;
+        max-width: 60rem;
+    }
+}
